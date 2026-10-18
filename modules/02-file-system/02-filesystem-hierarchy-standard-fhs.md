@@ -502,26 +502,156 @@ Understanding the Filesystem Hierarchy Standard helps you quickly locate files, 
 
 > **Key Point:** Knowing the Linux directory structure allows you to quickly understand **where things are, what they are used for, and where to look when something goes wron**
 
-### For Developers
-
-### For System Administrators
-
-### For DevOps Engineers
-
-### For Cloud Engineers
-
 ---
 
 ## 💻 Hands-on Practice
 
+Time to explore the Linux directory structure! In this lab, you'll inspect important directories and learn where Linux stores configuration files, user data, and system information.
+
+> **Remember:** You don't need to memorize every directory. Practice exploring them, and their purposes will become familiar over time.
+
+### 1. Explore the Root Directory
+
+```bash
+ls /
+```
+
+**Task:** Identify the major directories located directly under `/`.
+
+### 2. Explore the `/etc` Directory
+
+```bash
+ls /etc
+```
+
+**Task:** Find configuration files such as `/etc/hosts` and `/etc/passwd`.
+
+### 3. Find Your Home Directory
+
+```bash
+echo $HOME
+```
+
+**Task:** Identify your home directory and list its contents.
+
+```bash
+ls -la ~
+```
+
+### 4. Explore System Information
+
+```bash
+cat /proc/meminfo
+```
+
+**Task:** Find information about your system's memory.
+
+```bash
+cat /proc/cpuinfo
+```
+
+**Task:** Explore the processor information exposed by the Linux kernel.
+
+### 5. Explore System Logs
+
+```bash
+ls /var/log
+```
+
+**Task:** Identify the log files and directories available on your system. Some files may require administrator permissions.
+
+### 6. Check Installed Commands
+
+```bash
+ls /usr/bin | head
+```
+
+**Task:** View the first few entries in `/usr/bin`, which contains many user commands and executable programs.
+
+### 7. Explore Temporary Files
+
+```bash
+ls -la /tmp
+```
+
+**Task:** Observe the temporary files and directories currently present.
+
 ---
+
+## 🧪 Mini Lab
+
+Complete these tasks without referring to the chapter:
+
+- [ ] List the directories under `/`.
+- [ ] Locate your home directory.
+- [ ] Find the system configuration directory.
+- [ ] Display CPU and memory information.
+- [ ] Explore the available system logs.
+- [ ] Identify where user commands are commonly stored.
+
+---
+
+## 📝 Expected Learning Outcomes
+
+After completing this practice, you should be able to:
+
+- Identify important Linux directories and their purposes.
+- Locate user data, configuration files, and system logs.
+- Explore kernel and hardware information through `/proc`.
+- Use basic Linux commands to inspect the directory hierarchy.
+
+---
+
+### 🌟 Keep Going!
+
+You're learning the structure behind every Linux system. Take your time, experiment safely, and build your understanding one directory at a time. **Every command you practice today makes tomorrow's Linux administration easier.**
 
 ## 🎯 Interview Questions
 
----
+1. What is the Filesystem Hierarchy Standard (FHS) in Linux?
+2. Why do Linux systems follow a standard directory structure?
+3. What is the purpose of the root directory `/`?
+4. What is the difference between `/root` and `/home`?
+5. What type of files are typically stored in `/etc`?
+6. What is the purpose of the `/var` directory?
+7. What is the difference between `/usr/bin` and `/usr/sbin`?
+8. What information is available inside `/proc`?
+9. What is the purpose of the `/sys` directory?
+10. What is the difference between `/tmp` and `/var/tmp`?
+11. What is the purpose of the `/boot` directory?
+12. What is the difference between `/media` and `/mnt`?
+13. Where are application-specific files commonly installed when using `/opt`?
+14. What is the purpose of `/dev` in Linux?
+15. Are `/bin`, `/sbin`, and `/lib` always separate from their corresponding `/usr` directories on modern Linux distributions?
+16. Where are system logs commonly stored in Linux?
+17. Why is understanding the Linux directory structure important for DevOps engineers?
+18. How would you find CPU and memory information using Linux filesystem paths?
+19. Where would you look for system configuration files when troubleshooting a Linux server?
+20. Does every Linux distribution follow the FHS exactly?
 
 ## 📝 Summary
 
----
+In this chapter, you learned about the Filesystem Hierarchy Standard (FHS) and how Linux organizes files and directories.
+
+Key takeaways:
+
+- **FHS:** Defines conventions for organizing files and directories in Linux systems.
+- **Root Directory (`/`):** The starting point of the entire Linux filesystem hierarchy.
+- **System Configuration (`/etc`):** Stores system-wide configuration files.
+- **User Data (`/home`):** Contains the home directories of regular users.
+- **Root User (`/root`):** The home directory of the root administrator.
+- **System Logs (`/var/log`):** Commonly stores system and application logs.
+- **Temporary Files (`/tmp`):** Provides space for temporary files.
+- **System Information (`/proc` and `/sys`):** Expose information about kernel processes, hardware, and system resources.
+- **Boot Files (`/boot`):** Contains files required for the Linux boot process.
+- **Application Directories (`/usr` and `/opt`):** Store many system programs, libraries, and application files.
+
+Understanding the Linux directory structure helps developers, system administrators, and DevOps engineers locate configuration files, troubleshoot problems, inspect system resources, and manage applications more effectively.
+
+**Remember:** You don't need to memorize every directory immediately. Learn the purpose of important directories and practice navigating them using Linux commands.
 
 ## 📚 References
+
+- [Filesystem Hierarchy Standard (FHS)](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html)
+- [Linux Filesystem Hierarchy – Ubuntu Community Help Wiki](https://help.ubuntu.com/community/LinuxFilesystemTreeOverview)
+- [The Linux Documentation Project](https://tldp.org/)
